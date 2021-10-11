@@ -1,0 +1,122 @@
+2021-10-10 15:41:24,896 api_test.py[line:162]INFO - ########start to run API automation#######
+2021-10-10 15:41:24,896 api_test.py[line:163]INFO - *****runAllCase
+2021-10-10 15:41:24,896 api_test.py[line:85]INFO - *****deleteResultByProject
+2021-10-10 15:41:24,910 api_test.py[line:26]INFO - *****loadAllCaseByProject
+2021-10-10 15:41:24,912 api_test.py[line:29]INFO - loadAllCaseByProject sql is:select * from `myan_testcases` where project='myan' and run='yes'
+2021-10-10 15:41:24,912 api_test.py[line:31]INFO - loadAllCaseByProject is:[{'id': 1, 'project': 'myan', 'module': 'Login', 'title': 'app login', 'method': 'post', 'url': '/myan/api/v1.0/user/login', 'run': 'yes', 'headers': '{}', 'pre_case_id': -1, 'pre_fields': '[]', 'request_body': '{"account":"doqwmz09573@chacuo.net","password":"Kv6O4Sv9"}', 'expect_result': '0', 'assert_type': 'code', 'pass': '', 'msg': '', 'update_time': None, 'response': '', 'qa': 'Doris'}, {'id': 2, 'project': 'myan', 'module': 'Wallet', 'title': 'wallet info', 'method': 'get', 'url': '/myan/api/v1.0/wallet/info', 'run': 'yes', 'headers': '{"token":"$token$"}', 'pre_case_id': 1, 'pre_fields': '[{"field":"token","scope":"header"}]', 'request_body': '{}', 'expect_result': '0', 'assert_type': 'code', 'pass': '', 'msg': '', 'update_time': None, 'response': '', 'qa': 'Doris'}]
+2021-10-10 15:41:24,913 api_test.py[line:135]INFO - *****runCaseUpdateDB
+2021-10-10 15:41:24,913 api_test.py[line:190]INFO - *****runCase
+2021-10-10 15:41:24,913 api_test.py[line:191]INFO - #####start to run case id: 1
+2021-10-10 15:41:24,913 api_test.py[line:254]INFO - case id = 1
+req_url =  https://platform.htilarpay.com/myan/api/v1.0/user/login
+ method = post
+ header = {}
+ param ={'account': 'doqwmz09573@chacuo.net', 'password': 'Kv6O4Sv9'}
+2021-10-10 15:41:25,859 api_test.py[line:261]INFO - response = ↓
+2021-10-10 15:41:25,859 api_test.py[line:262]INFO - {'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '40aafe83692c469d8c252f324c784dd9', 'token_expire': '2021-11-09 15:41:26', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851686219}
+2021-10-10 15:41:25,859 api_test.py[line:263]INFO - #####end to run case id: 1
+2021-10-10 15:41:25,859 api_test.py[line:273]INFO - *****assertResponse
+2021-10-10 15:41:25,859 api_test.py[line:285]INFO - 测试用例通过
+2021-10-10 15:41:25,859 api_test.py[line:144]INFO - assert_msg:{'is_pass': True, 'msg': 'module:Login,title:app login,assert_type:code,message:success'}
+2021-10-10 15:41:25,859 api_test.py[line:70]INFO - *****updateResultByCaseId
+2021-10-10 15:41:25,884 api_test.py[line:76]INFO - update `myan_testcases` set response="{'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '40aafe83692c469d8c252f324c784dd9', 'token_expire': '2021-11-09 15:41:26', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851686219}", pass='Pass', msg='module:Login,title:app login,assert_type:code,message:success', update_time='2021-10-10 15:41:25' where id=1
+2021-10-10 15:41:25,887 api_test.py[line:149]INFO - 更新结果 rows=1
+2021-10-10 15:41:25,887 api_test.py[line:190]INFO - *****runCase
+2021-10-10 15:41:25,887 api_test.py[line:191]INFO - #####start to run case id: 2
+2021-10-10 15:41:25,888 api_test.py[line:224]INFO - 有前置条件
+2021-10-10 15:41:25,888 api_test.py[line:40]INFO - *****findCaseById
+2021-10-10 15:41:25,917 api_test.py[line:190]INFO - *****runCase
+2021-10-10 15:41:25,917 api_test.py[line:191]INFO - #####start to run case id: 1
+2021-10-10 15:41:25,917 api_test.py[line:254]INFO - case id = 1
+req_url =  https://platform.htilarpay.com/myan/api/v1.0/user/login
+ method = post
+ header = {}
+ param ={'account': 'doqwmz09573@chacuo.net', 'password': 'Kv6O4Sv9'}
+2021-10-10 15:41:26,400 api_test.py[line:261]INFO - response = ↓
+2021-10-10 15:41:26,400 api_test.py[line:262]INFO - {'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '8216fdeed1c649339f3f2b7d51ea5ff1', 'token_expire': '2021-11-09 15:41:26', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851686760}
+2021-10-10 15:41:26,400 api_test.py[line:263]INFO - #####end to run case id: 1
+2021-10-10 15:41:26,400 api_test.py[line:273]INFO - *****assertResponse
+2021-10-10 15:41:26,400 api_test.py[line:285]INFO - 测试用例通过
+2021-10-10 15:41:26,400 api_test.py[line:234]INFO - 前置条件通过
+2021-10-10 15:41:26,400 api_test.py[line:243]INFO - {'field': 'token', 'scope': 'header'}
+2021-10-10 15:41:26,400 api_test.py[line:251]INFO - field_value:8216fdeed1c649339f3f2b7d51ea5ff1
+2021-10-10 15:41:26,400 api_test.py[line:254]INFO - case id = 2
+req_url =  https://platform.htilarpay.com/myan/api/v1.0/wallet/info
+ method = get
+ header = {'token': '8216fdeed1c649339f3f2b7d51ea5ff1'}
+ param ={}
+2021-10-10 15:41:26,703 api_test.py[line:261]INFO - response = ↓
+2021-10-10 15:41:26,703 api_test.py[line:262]INFO - {'code': 0, 'msg': 'success', 'data': {'create_time': '2021-09-05T19:42:29+08:00', 'max_balance_limit': '4294967295', 'max_withdraw_limit': '4294967295', 'total_balance': '999900', 'useable_balance': '999900', 'wallet_sn': 40}, 'time': 1633851687067}
+2021-10-10 15:41:26,703 api_test.py[line:263]INFO - #####end to run case id: 2
+2021-10-10 15:41:26,703 api_test.py[line:273]INFO - *****assertResponse
+2021-10-10 15:41:26,703 api_test.py[line:285]INFO - 测试用例通过
+2021-10-10 15:41:26,704 api_test.py[line:144]INFO - assert_msg:{'is_pass': True, 'msg': 'module:Wallet,title:wallet info,assert_type:code,message:success'}
+2021-10-10 15:41:26,704 api_test.py[line:70]INFO - *****updateResultByCaseId
+2021-10-10 15:41:26,722 api_test.py[line:76]INFO - update `myan_testcases` set response="{'code': 0, 'msg': 'success', 'data': {'create_time': '2021-09-05T19:42:29+08:00', 'max_balance_limit': '4294967295', 'max_withdraw_limit': '4294967295', 'total_balance': '999900', 'useable_balance': '999900', 'wallet_sn': 40}, 'time': 1633851687067}", pass='Pass', msg='module:Wallet,title:wallet info,assert_type:code,message:success', update_time='2021-10-10 15:41:26' where id=2
+2021-10-10 15:41:26,724 api_test.py[line:149]INFO - 更新结果 rows=1
+2021-10-10 15:41:26,725 api_test.py[line:116]INFO - *****checkFailCase
+2021-10-10 15:41:26,739 api_test.py[line:177]INFO - ########rerun fail test cases#######
+2021-10-10 15:41:26,739 api_test.py[line:135]INFO - *****runCaseUpdateDB
+2021-10-10 15:41:26,739 api_test.py[line:190]INFO - *****runCase
+2021-10-10 15:41:26,739 api_test.py[line:191]INFO - #####start to run case id: 1
+2021-10-10 15:41:26,739 api_test.py[line:254]INFO - case id = 1
+req_url =  https://platform.htilarpay.com/myan/api/v1.0/user/login
+ method = post
+ header = {}
+ param ={'account': 'doqwmz09573@chacuo.net', 'password': 'Kv6O4Sv9'}
+2021-10-10 15:41:27,070 api_test.py[line:261]INFO - response = ↓
+2021-10-10 15:41:27,070 api_test.py[line:262]INFO - {'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '87050e3eac4c4351afa6767c052b4dde', 'token_expire': '2021-11-09 15:41:27', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851687434}
+2021-10-10 15:41:27,070 api_test.py[line:263]INFO - #####end to run case id: 1
+2021-10-10 15:41:27,070 api_test.py[line:273]INFO - *****assertResponse
+2021-10-10 15:41:27,070 api_test.py[line:285]INFO - 测试用例通过
+2021-10-10 15:41:27,070 api_test.py[line:144]INFO - assert_msg:{'is_pass': True, 'msg': 'module:Login,title:app login,assert_type:code,message:success'}
+2021-10-10 15:41:27,070 api_test.py[line:70]INFO - *****updateResultByCaseId
+2021-10-10 15:41:27,097 api_test.py[line:76]INFO - update `myan_testcases` set response="{'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '87050e3eac4c4351afa6767c052b4dde', 'token_expire': '2021-11-09 15:41:27', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851687434}", pass='Pass', msg='module:Login,title:app login,assert_type:code,message:success', update_time='2021-10-10 15:41:27' where id=1
+2021-10-10 15:41:27,100 api_test.py[line:149]INFO - 更新结果 rows=1
+2021-10-10 15:41:27,100 api_test.py[line:190]INFO - *****runCase
+2021-10-10 15:41:27,100 api_test.py[line:191]INFO - #####start to run case id: 2
+2021-10-10 15:41:27,100 api_test.py[line:224]INFO - 有前置条件
+2021-10-10 15:41:27,100 api_test.py[line:40]INFO - *****findCaseById
+2021-10-10 15:41:27,113 api_test.py[line:190]INFO - *****runCase
+2021-10-10 15:41:27,113 api_test.py[line:191]INFO - #####start to run case id: 1
+2021-10-10 15:41:27,113 api_test.py[line:254]INFO - case id = 1
+req_url =  https://platform.htilarpay.com/myan/api/v1.0/user/login
+ method = post
+ header = {}
+ param ={'account': 'doqwmz09573@chacuo.net', 'password': 'Kv6O4Sv9'}
+2021-10-10 15:41:27,444 api_test.py[line:261]INFO - response = ↓
+2021-10-10 15:41:27,444 api_test.py[line:262]INFO - {'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '8cca145fd26f448c9614ae5b8d664700', 'token_expire': '2021-11-09 15:41:27', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851687809}
+2021-10-10 15:41:27,445 api_test.py[line:263]INFO - #####end to run case id: 1
+2021-10-10 15:41:27,445 api_test.py[line:273]INFO - *****assertResponse
+2021-10-10 15:41:27,445 api_test.py[line:285]INFO - 测试用例通过
+2021-10-10 15:41:27,445 api_test.py[line:234]INFO - 前置条件通过
+2021-10-10 15:41:27,445 api_test.py[line:243]INFO - {'field': 'token', 'scope': 'header'}
+2021-10-10 15:41:27,445 api_test.py[line:251]INFO - field_value:8cca145fd26f448c9614ae5b8d664700
+2021-10-10 15:41:27,445 api_test.py[line:254]INFO - case id = 2
+req_url =  https://platform.htilarpay.com/myan/api/v1.0/wallet/info
+ method = get
+ header = {'token': '8cca145fd26f448c9614ae5b8d664700'}
+ param ={}
+2021-10-10 15:41:27,752 api_test.py[line:261]INFO - response = ↓
+2021-10-10 15:41:27,752 api_test.py[line:262]INFO - {'code': 0, 'msg': 'success', 'data': {'create_time': '2021-09-05T19:42:29+08:00', 'max_balance_limit': '4294967295', 'max_withdraw_limit': '4294967295', 'total_balance': '999900', 'useable_balance': '999900', 'wallet_sn': 40}, 'time': 1633851688116}
+2021-10-10 15:41:27,752 api_test.py[line:263]INFO - #####end to run case id: 2
+2021-10-10 15:41:27,752 api_test.py[line:273]INFO - *****assertResponse
+2021-10-10 15:41:27,752 api_test.py[line:285]INFO - 测试用例通过
+2021-10-10 15:41:27,752 api_test.py[line:144]INFO - assert_msg:{'is_pass': True, 'msg': 'module:Wallet,title:wallet info,assert_type:code,message:success'}
+2021-10-10 15:41:27,752 api_test.py[line:70]INFO - *****updateResultByCaseId
+2021-10-10 15:41:27,771 api_test.py[line:76]INFO - update `myan_testcases` set response="{'code': 0, 'msg': 'success', 'data': {'create_time': '2021-09-05T19:42:29+08:00', 'max_balance_limit': '4294967295', 'max_withdraw_limit': '4294967295', 'total_balance': '999900', 'useable_balance': '999900', 'wallet_sn': 40}, 'time': 1633851688116}", pass='Pass', msg='module:Wallet,title:wallet info,assert_type:code,message:success', update_time='2021-10-10 15:41:27' where id=2
+2021-10-10 15:41:27,775 api_test.py[line:149]INFO - 更新结果 rows=1
+2021-10-10 15:41:27,775 api_test.py[line:369]INFO - *****sendTestReport
+2021-10-10 15:41:27,834 api_test.py[line:318]INFO - *****loadHtmlPre
+2021-10-10 15:41:27,838 api_test.py[line:340]INFO - *****getResultData
+2021-10-10 15:41:27,838 api_test.py[line:26]INFO - *****loadAllCaseByProject
+2021-10-10 15:41:27,865 api_test.py[line:29]INFO - loadAllCaseByProject sql is:select * from `myan_testcases` where project='myan' and run='yes'
+2021-10-10 15:41:27,865 api_test.py[line:31]INFO - loadAllCaseByProject is:[{'id': 1, 'project': 'myan', 'module': 'Login', 'title': 'app login', 'method': 'post', 'url': '/myan/api/v1.0/user/login', 'run': 'yes', 'headers': '{}', 'pre_case_id': -1, 'pre_fields': '[]', 'request_body': '{"account":"doqwmz09573@chacuo.net","password":"Kv6O4Sv9"}', 'expect_result': '0', 'assert_type': 'code', 'pass': 'Pass', 'msg': 'module:Login,title:app login,assert_type:code,message:success', 'update_time': '2021-10-10 15:41:27', 'response': "{'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '87050e3eac4c4351afa6767c052b4dde', 'token_expire': '2021-11-09 15:41:27', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851687434}", 'qa': 'Doris'}, {'id': 2, 'project': 'myan', 'module': 'Wallet', 'title': 'wallet info', 'method': 'get', 'url': '/myan/api/v1.0/wallet/info', 'run': 'yes', 'headers': '{"token":"$token$"}', 'pre_case_id': 1, 'pre_fields': '[{"field":"token","scope":"header"}]', 'request_body': '{}', 'expect_result': '0', 'assert_type': 'code', 'pass': 'Pass', 'msg': 'module:Wallet,title:wallet info,assert_type:code,message:success', 'update_time': '2021-10-10 15:41:27', 'response': "{'code': 0, 'msg': 'success', 'data': {'create_time': '2021-09-05T19:42:29+08:00', 'max_balance_limit': '4294967295', 'max_withdraw_limit': '4294967295', 'total_balance': '999900', 'useable_balance': '999900', 'wallet_sn': 40}, 'time': 1633851688116}", 'qa': 'Doris'}]
+2021-10-10 15:41:27,866 api_test.py[line:99]INFO - *****caseRunSummary
+2021-10-10 15:41:27,883 api_test.py[line:26]INFO - *****loadAllCaseByProject
+2021-10-10 15:41:27,897 api_test.py[line:29]INFO - loadAllCaseByProject sql is:select * from `myan_testcases` where project='myan' and run='yes'
+2021-10-10 15:41:27,898 api_test.py[line:31]INFO - loadAllCaseByProject is:[{'id': 1, 'project': 'myan', 'module': 'Login', 'title': 'app login', 'method': 'post', 'url': '/myan/api/v1.0/user/login', 'run': 'yes', 'headers': '{}', 'pre_case_id': -1, 'pre_fields': '[]', 'request_body': '{"account":"doqwmz09573@chacuo.net","password":"Kv6O4Sv9"}', 'expect_result': '0', 'assert_type': 'code', 'pass': 'Pass', 'msg': 'module:Login,title:app login,assert_type:code,message:success', 'update_time': '2021-10-10 15:41:27', 'response': "{'code': 0, 'msg': 'success', 'data': {'email': 'doqwmz09573@chacuo.net', 'full_name': 'auotokskskskk', 'gender': 2, 'mobile': '93939493903', 'token': '87050e3eac4c4351afa6767c052b4dde', 'token_expire': '2021-11-09 15:41:27', 'user_id': '8132826ac2014136aae815e1b212b45d', 'username': 'doqwmz09573@chacuo.net'}, 'time': 1633851687434}", 'qa': 'Doris'}, {'id': 2, 'project': 'myan', 'module': 'Wallet', 'title': 'wallet info', 'method': 'get', 'url': '/myan/api/v1.0/wallet/info', 'run': 'yes', 'headers': '{"token":"$token$"}', 'pre_case_id': 1, 'pre_fields': '[{"field":"token","scope":"header"}]', 'request_body': '{}', 'expect_result': '0', 'assert_type': 'code', 'pass': 'Pass', 'msg': 'module:Wallet,title:wallet info,assert_type:code,message:success', 'update_time': '2021-10-10 15:41:27', 'response': "{'code': 0, 'msg': 'success', 'data': {'create_time': '2021-09-05T19:42:29+08:00', 'max_balance_limit': '4294967295', 'max_withdraw_limit': '4294967295', 'total_balance': '999900', 'useable_balance': '999900', 'wallet_sn': 40}, 'time': 1633851688116}", 'qa': 'Doris'}]
+2021-10-10 15:41:27,899 api_test.py[line:328]INFO - *****loadHtmlEnd
+2021-10-10 15:41:27,902 send_mail.py[line:16]INFO - title = myan API automation test report report = ../report/myan/test_report_2021-10-10_15_41_27.html mail_host = smtp.qq.com mail_sender = brsbyjw@qq.com mail_receivers = ['1226682240@qq.com'] mail_password = luesrdnzkwxrbdbh
+2021-10-10 15:41:29,244 send_mail.py[line:45]INFO - email was sent successfully!
+2021-10-10 15:41:29,290 api_test.py[line:181]INFO - ########complete to run API automation#######
